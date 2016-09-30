@@ -1,8 +1,7 @@
-VNC_SERVER_PASSWORD=$1
 USER=$2
 sudo apt-get -y update
 sudo apt-get -y install xfce4 xfce4-goodies tightvncserver
-echo "$VNC_SERVER_PASSWORD\n$VNC_SERVER_PASSWORD\n" | vncserver -S
+vncserver
 vncserver -kill :1
 mv ~/.vnc/xstartup ~/.vnc/xstartup.bak
 echo "#!/bin/bash\nxrdb $HOME/.Xresources\nstartxfce4 &" > ~/.vnc/xstartup
