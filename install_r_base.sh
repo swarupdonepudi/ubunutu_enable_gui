@@ -4,10 +4,10 @@ sudo apt-get remove r-base-core
 cp /etc/apt/sources.list sources.list
 if grep -Fxq "cran" sources.list
 then
-  sed 's/.*cran.*/deb http:\/\/cran.rstudio.com\/bin\/linux\/ubuntu trusty\/' sources.list
+  sed 's/.*cran.*/deb http:\/\/cran\.rstudio\.com\/bin\/linux\/ubuntu trusty\/' sources.list
 else
   echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty/" >> sources.list
 fi
 sudo cp sources.list /etc/apt/sources.list
 sudo apt-get --assume-yes update
-sudo apt-get --assume-yes install r-base-core=3.2.2-1trusty0
+sudo apt-get -y --force-yes install r-base-core=3.2.2-1trusty0
