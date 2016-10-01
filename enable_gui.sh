@@ -11,3 +11,7 @@ sudo sed  -i 's/'"$export_user_find_string"'/'"$export_user_replace_string"'/' /
 sudo chmod +x /etc/init.d/vncserver
 sudo service vncserver start
 sudo update-rc.d vncserver defaults
+sudo chmod +x install_r_base.sh
+echo "****** Installing R Version 3.2.2"
+sh install_r_base.sh
+echo "****** Finished installing R Version 3.2.2"
