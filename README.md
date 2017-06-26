@@ -18,3 +18,5 @@ chmod +x enable_gui.sh
 ./enable_gui.sh "ubuntu" | tee -a enable_gui_execution.log
 ```
 > Note: The shell script will prompt password for VNC server couple of times
+
+..
